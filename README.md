@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обращение к Президенту России</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0057b7 0%, #0057b7 50%, #ffd700 50%, #ffd700 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .header {
+            background: #0057b7;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .president-photo {
+            width: 120px;
+            height: 120px;
+            margin: 20px auto;
+            background: #f0f0f0;
+            border-radius: 50%;
+            border: 5px solid #ffd700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .form-container {
+            padding: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: #0057b7;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 15px;
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #0057b7;
+            box-shadow: 0 0 15px rgba(0, 87, 183, 0.3);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #0057b7 0%, #003d7a 100%);
+            color: white;
+            padding: 20px;
+            border: none;
+            border-radius: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(135deg, #003d7a 0%, #00264d 100%);
+            transform: scale(1.02);
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+        
+        .required {
+            color: #ff4444;
+            font-size: 24px;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            border: 2px solid #c3e6cb;
+            font-size: 18px;
+        }
+        
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0057b7;
+        }
+        
+        .instructions h3 {
+            color: #0057b7;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ol {
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #ddd;
+        }
+        
+        .footer p {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        
+        .big-text {
+            font-size: 22px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .header p {
+                font-size: 16px;
+            }
+            
+            input, textarea, select {
+                font-size: 18px;
+                padding: 12px;
+            }
+            
+            .btn {
+                font-size: 20px;
+                padding: 15px;
+            }
+            
+            .big-text {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ОБРАЩЕНИЕ К ПРЕЗИДЕНТУ</h1>
+            <p>Владимиру Владимировичу Путину</p>
+            <div class="president-photo">
+                Официальный портрет<br>Президента<br>Российской Федерации
+            </div>
+        </div>
+        
+        <div class="form-container">
+            <div class="instructions">
+                <h3>Как отправить обращение:</h3>
+                <ol>
+                    <li>Заполните все поля формы</li>
+                    <li>Напишите ваше обращение в большом поле</li>
+                    <li>Нажмите большую синюю кнопку "ОТПРАВИТЬ"</li>
+                    <li>Ждите ответ на вашу почту</li>
+                </ol>
+            </div>
+            
+            <form action="mailto:vladimirvladimirovichputin1@mail.ru" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label class="big-text">Ваше ФИО <span class="required">*</span></label>
+                    <input type="text" name="ФИО" required placeholder="Иванов Иван Иванович" style="font-size: 20px;">
+                </div>
+                
+                <div class="form-group">
+                    <label class="big-text">Ваш Email <span class="required">*</span></label>
+                    <input type="email" name="Email" required placeholder="vash@email.ru" style="font-size: 20px;">
+                </div>
+                
+                <div class="form-group">
+                    <label class="big-text">Откуда вы <span class="required">*</span></label>
+                    <select name="Регион" required style="font-size: 20px; height: 60px;">
+                        <option value="">Выберите ваш город или область</option>
+                        <option value="Москва">Москва</option>
+                        <option value="Санкт-Петербург">Санкт-Петербург</option>
+                        <option value="Московская область">Московская область</option>
+                        <option value="Новосибирск">Новосибирск</option>
+                        <option value="Екатеринбург">Екатеринбург</option>
+                        <option value="Другой">Другой город</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="big-text">О чём ваше обращение? <span class="required">*</span></label>
+                    <select name="Тема" required style="font-size: 20px; height: 60px;">
+                        <option value="">Выберите тему</option>
+                        <option value="ЖКХ">ЖКХ и коммунальные услуги</option>
+                        <option value="Здравоохранение">Здравоохранение</option>
+                        <option value="Пенсии">Пенсии и социальная помощь</option>
+                        <option value="Образование">Образование</option>
+                        <option value="Другое">Другое</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="big-text">Ваше обращение <span class="required">*</span></label>
+                    <textarea name="Обращение" required placeholder="Уважаемый Владимир Владимирович, пишу вам по вопросу..." style="font-size: 20px;"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">ОТПРАВИТЬ ОБРАЩЕНИЕ</button>
+            </form>
+            
+            <div class="footer">
+                <p>Официальная форма для обращений граждан</p>
+                <p>Каждое обращение будет рассмотрено</p>
+                <p>Ответ придёт на вашу электронную почту</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Простой скрипт для улучшения UX
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const inputs = form.querySelectorAll('input, textarea, select');
+            
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.style.borderColor = '#0057b7';
+                    this.style.backgroundColor = '#f8f9fa';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.style.backgroundColor = 'white';
+                });
+            });
+            
+            // Подсказка при наведении на поля
+            const emailInput = form.querySelector('input[type="email"]');
+            emailInput.title = "На этот email придёт ответ на ваше обращение";
+        });
+    </script>
+</body>
+</html>
